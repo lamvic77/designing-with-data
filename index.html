@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bloom - A Living Digital Garden</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Bloom 🌷</h1>
+
+        <nav>
+            <a href="#garden">My Garden</a>
+            <a href="#weather">Today's Weather</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <!-- INTRODUCTION -->
+    <section class="intro">
+        <h2>A Little Garden That Lives With the Weather</h2>
+
+        <p>
+            Watch your garden grow and change with the
+            environment around you.
+        </p>
+    </section>
+
+
+    <!-- MAIN GARDEN -->
+    <main>
+
+        <section id="garden">
+
+            <h2>My Digital Garden</h2>
+
+            <div class="garden-container">
+
+
+                <!-- Clouds -->
+<div id="clouds" class="clouds"></div>
+<div id="rainAnimation"></div>
+<div id="snow"></div>
+
+
+                <!-- Flowers -->
+                <div class="flowers" id="flowers">
+                    <span class="flower">🌷</span>
+                    <span class="flower">🌻</span>
+                    <span class="flower">🌼</span>
+                    <span class="flower">🌸</span>
+                    <span class="flower">🌺</span>
+                </div>
+
+                <!-- Garden ground -->
+                <div class="ground">
+                    <p>Welcome to Bloom!</p>
+                </div>
+
+            </div>
+
+            <!-- Garden interactions -->
+           <div class="garden-controls">
+
+    <button id="plantButton">
+        🌱 Plant a Flower
+    </button>
+
+    <button id="growButton">
+        🌸 Make Flowers Bloom
+    </button>
+
+    <button id="restartButton">
+        🔄 Restart Garden
+    </button>
+
+</div>
+
+        </section>
+
+
+        <!-- WEATHER INFORMATION -->
+        <section id="weather">
+
+            <h2>Today's Environment</h2>
+
+            <div class="weather-container">
+
+                <div class="weather-card">
+                    <span>🌡️</span>
+                    <h3>Temperature</h3>
+                    <p id="temperature">Loading...</p>
+                </div>
+
+                <div class="weather-card">
+                    <span>💨</span>
+                    <h3>Wind Speed</h3>
+                    <p id="wind">Loading...</p>
+                </div>
+
+                <div class="weather-card">
+    <span>🌧️</span>
+    <h3>Rainfall</h3>
+    <p id="rainfall">Loading...</p>
+</div>
+
+                <div class="weather-card">
+                    <span>☁️</span>
+                    <h3>Cloud Cover</h3>
+                    <p id="cloudCover">Loading...</p>
+                </div>
+
+            </div>
+
+            <p id="gardenMessage">
+                Your garden is waiting for its weather report...
+            </p>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about">
+
+            <h2>About Bloom</h2>
+
+            <p>
+                Bloom is an interactive digital garden
+                powered by real-time environmental data.
+                Watch as temperature, wind, and rainfall
+                influence the way your garden grows.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Bloom © 2026 | A garden shaped by nature 🌿</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

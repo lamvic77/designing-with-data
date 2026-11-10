@@ -1,0 +1,559 @@
+
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #faf8f0;
+    color: #405b43;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: #f2f0df;
+    border-bottom: 1px solid #e4e2d1;
+}
+
+header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    color: #597b55;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #597b55;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d98b9c;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro {
+    text-align: center;
+    padding: 65px 20px 45px;
+}
+
+.intro h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    color: #597b55;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #82927a;
+    font-size: 17px;
+}
+
+
+/* =========================
+   MAIN SECTIONS
+========================= */
+
+main {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 65px;
+}
+
+section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   GARDEN
+========================= */
+
+.garden-container {
+    position: relative;
+    height: 400px;
+
+    overflow: hidden;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        to bottom,
+        #cce6e9 0%,
+        #e9e9c9 65%,
+        #9fbd86 100%
+    );
+
+    box-shadow: 0 8px 25px rgba(80, 100, 70, 0.12);
+}
+
+
+/* Flower arrangement */
+
+.flowers {
+    position: absolute;
+    bottom: 65px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.flower {
+    display: inline-block;
+    font-size: 55px;
+
+    animation: sway 3s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.flower:nth-child(even) {
+    animation-delay: 0.5s;
+}
+
+.flower:nth-child(3n) {
+    font-size: 70px;
+}
+
+
+/* Grass */
+
+.ground {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 90px;
+
+    background-color: #87a96b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ground p {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+/* Flower animation */
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+
+/* =========================
+   GARDEN BUTTONS
+========================= */
+
+.garden-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+button {
+    background-color: #78976c;
+    color: white;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 13px 25px;
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #d995a4;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   WEATHER CARDS
+========================= */
+
+.weather-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.weather-card {
+    background-color: #f0f1e5;
+
+    border-radius: 20px;
+    padding: 25px 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(80, 100, 70, 0.06);
+
+    transition: transform 0.3s;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+}
+
+.weather-card span {
+    font-size: 32px;
+}
+
+.weather-card h3 {
+    margin: 10px 0;
+    color: #597b55;
+    font-size: 16px;
+}
+
+.weather-card p {
+    font-size: 19px;
+    font-weight: 700;
+    color: #d18b9b;
+}
+
+
+/* Garden message */
+
+#gardenMessage {
+    text-align: center;
+    margin-top: 25px;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #78976c;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+#about {
+    background-color: #f0f1e5;
+    border-radius: 25px;
+
+    padding: 40px;
+    text-align: center;
+}
+
+#about p {
+    max-width: 650px;
+    margin: auto;
+
+    line-height: 1.8;
+    color: #82927a;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #e8ebdc;
+    color: #78906e;
+
+    text-align: center;
+    padding: 25px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .intro h2 {
+        font-size: 29px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .weather-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .garden-container {
+        height: 320px;
+    }
+
+    .flower {
+        font-size: 38px;
+    }
+
+    .garden-controls {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .weather-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .weather-card {
+        padding: 18px 8px;
+    }
+
+    .garden-controls {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #about {
+        padding: 25px;
+    }
+}
+/* Flower interaction */
+
+.flower {
+    cursor: pointer;
+    transition: font-size 0.4s ease;
+}
+
+.flower:hover {
+    transform: scale(1.2);
+}
+
+/* CLOUDS */
+
+.clouds {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100px;
+    pointer-events: none;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 55px;
+    animation: floatCloud 6s ease-in-out infinite;
+}
+
+.cloud:nth-child(1) {
+    left: 10%;
+    top: 10px;
+}
+
+.cloud:nth-child(2) {
+    left: 45%;
+    top: 30px;
+    animation-delay: 2s;
+}
+
+.cloud:nth-child(3) {
+    left: 75%;
+    top: 0px;
+    animation-delay: 1s;
+}
+
+@keyframes floatCloud {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+#rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.raindrop {
+    position: absolute;
+    top: -20px;
+    color: #7bbce0;
+    font-size: 18px;
+    animation: rainFall 1s linear infinite;
+}
+
+@keyframes rainFall {
+    to {
+        transform: translateY(450px);
+    }
+}
+
+/* SNOW ANIMATION */
+
+.snowflake {
+    position: absolute;
+    top: -20px;
+    color: white;
+    font-size: 20px;
+    animation: snowFall 5s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes snowFall {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(200px) translateX(15px);
+    }
+
+    100% {
+        transform: translateY(450px) translateX(-10px);
+    }
+}
+/* FLOWER GROWTH */
+
+.flower {
+    display: inline-block;
+    font-size: 55px;
+    transition: font-size 0.5s ease;
+    transform-origin: bottom center;
+}
+
+/* BLOOMED FLOWERS */
+
+.flower.bloomed {
+    font-size: 100px;
+}
+
+/* MAXIMUM GROWTH */
+
+.flower.fully-grown {
+    font-size: 140px;
+}
+
+/* RESTART BUTTON */
+
+#restartButton {
+    background-color: #d995a4;
+}
+
+#restartButton:hover {
+    background-color: #c77c8d;
+}
+
+
+/* Smooth sky transitions */
+.garden-container {
+    transition: background 3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
